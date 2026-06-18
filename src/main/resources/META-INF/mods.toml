@@ -1,16 +1,15 @@
 modLoader = "javafml"
 loaderVersion = "*"
 license = "All rights reserved"
-issueTrackerURL = "https://github.com/henkelmax/pipez/issues"
+issueTrackerURL = "https://github.com/Shinkarna/pipez/issues"
 [[mods]]
 modId = "pipez_ce"
 version = "${mod_version}"
 displayName = "Pipez Community Edition"
-updateJSONURL = "https://update.maxhenkel.de/forge/pipez"
-displayURL = "https://www.curseforge.com/minecraft/mc-mods/pipez"
+displayURL = "https://github.com/Shinkarna/pipez"
 logoFile = "icon.png"
-authors = "Max Henkel"
-description = '''Simple and efficient pipes'''
+authors = "NekoGan, Max Henkel"
+description = '''Simple and efficient pipes. Community optimized fork with 24x performance improvement.'''
 [[dependencies.pipez]]
 modId = "forge"
 mandatory = true

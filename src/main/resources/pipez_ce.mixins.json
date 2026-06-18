@@ -1,0 +1,23 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.nekogan.pipez.integration.mekanism.mixins",
+  "refmap": "pipez_ce.refmap.json",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "FormationProtocolMixin",
+    "TileEntityBoilerValveMixin",
+    "TileEntityDynamicValveMixin",
+    "TileEntityFissionReactorPortMixin",
+    "TileEntityFusionReactorControllerMixin",
+    "TileEntityFusionReactorPortMixin",
+    "TileEntityInductionPortMixin",
+    "TileEntitySPSPortMixin",
+    "TileEntityThermalEvaporationControllerMixin",
+    "TileEntityThermalEvaporationValveMixin",
+    "TileEntityTurbineValveMixin",
+    "TileEntityTurbineVentMixin",
+    "com.nekogan.pipez.integration.backoff.MixinPipeLogicTileEntity",
+    "com.nekogan.pipez.integration.backoff.MixinItemPipeType"
+  ]
+}

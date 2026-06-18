@@ -1,0 +1,22 @@
+package com.nekogan.pipez.integration.waila;
+
+import com.nekogan.pipez.blocks.PipeBlock;
+import com.nekogan.pipez.blocks.tileentity.UpgradeTileEntity;
+import snownee.jade.api.IWailaClientRegistration;
+import snownee.jade.api.IWailaCommonRegistration;
+import snownee.jade.api.IWailaPlugin;
+import snownee.jade.api.WailaPlugin;
+
+@WailaPlugin
+public class PluginPipes implements IWailaPlugin {
+
+    @Override
+    public void registerClient(IWailaClientRegistration registration) {
+        registration.registerBlockComponent(HUDHandlerPipes.INSTANCE, PipeBlock.class);
+    }
+
+    @Override
+    public void register(IWailaCommonRegistration registration) {
+        registration.registerBlockDataProvider(HUDHandlerPipes.INSTANCE, UpgradeTileEntity.class);
+    }
+}

@@ -1,13 +1,13 @@
 {
   "replace": false,
   "values": [
-    "pipez:energy_pipe",
-    "pipez:fluid_pipe",
+    "pipez_ce:energy_pipe",
+    "pipez_ce:fluid_pipe",
     {
-      "id": "pipez:gas_pipe",
+      "id": "pipez_ce:gas_pipe",
       "required": false
     },
-    "pipez:item_pipe",
-    "pipez:universal_pipe"
+    "pipez_ce:item_pipe",
+    "pipez_ce:universal_pipe"
   ]
 }

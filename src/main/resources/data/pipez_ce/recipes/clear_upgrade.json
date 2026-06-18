@@ -1,0 +1,6 @@
+{
+  "type": "pipez_ce:clear_nbt",
+  "item": {
+    "tag": "pipez_ce:upgrades"
+  }
+}

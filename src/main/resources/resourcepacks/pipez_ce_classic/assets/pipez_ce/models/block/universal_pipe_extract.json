@@ -1,0 +1,7 @@
+{
+	"parent": "pipez_ce:block/pipe_extract",
+	"textures": {
+		"0": "pipez_ce:block/universal_pipe",
+		"particle": "pipez_ce:block/universal_pipe"
+	}
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "NRN",
+    "RUR",
+    "NRN"
+  ],
+  "key": {
+    "N": {
+      "tag": "forge:ingots/netherite"
+    },
+    "R": {
+      "tag": "forge:storage_blocks/redstone"
+    },
+    "U": {
+      "item": "pipez_ce:advanced_upgrade"
+    }
+  },
+  "result": {
+    "item": "pipez_ce:ultimate_upgrade",
+    "count": 1
+  }
+}

@@ -11,6 +11,7 @@ apply from: "https://raw.githubusercontent.com/henkelmax/mod-gradle-scripts/${mo
 
 repositories {
     maven { url = 'https://modmaven.dev' }
+    maven { url = 'https://repo.spongepowered.org/repository/maven-public/' }
 }
 
 dependencies {
@@ -18,15 +19,18 @@ dependencies {
     implementation fg.deobf("maven.modrinth:the-one-probe:${theoneprobe_version}")
     implementation fg.deobf("maven.modrinth:jade:${jade_version}")
 
-    compileOnly "mekanism:Mekanism:${mekanism_version}:api"
-    runtimeOnly fg.deobf("mekanism:Mekanism:${mekanism_version}")
-    runtimeOnly fg.deobf("mekanism:Mekanism:${mekanism_version}:additions")
-    runtimeOnly fg.deobf("mekanism:Mekanism:${mekanism_version}:generators")
-    runtimeOnly fg.deobf("mekanism:Mekanism:${mekanism_version}:tools")
+    // Mekanism — optional, only needed for gas pipes and multiblock fix
+    compileOnly fg.deobf("mekanism:Mekanism:${mekanism_version}")
+    compileOnly fg.deobf("mekanism:Mekanism:${mekanism_version}:generators")
 
     shadow fg.deobf("de.maxhenkel.corelib:corelib:${minecraft_version}-${corelib_version}:api")
     runtimeOnly fg.deobf("de.maxhenkel.corelib:corelib:${minecraft_version}-${corelib_version}")
     compileOnly fg.deobf("de.maxhenkel.corelib:corelib:${minecraft_version}-${corelib_version}:javadoc")
+
+    // MixinExtras for FormationProtocolMixin @Local (provided by Mekanism at runtime)
+    annotationProcessor "io.github.llamalad7:mixinextras-common:0.4.1"
+    compileOnly "io.github.llamalad7:mixinextras-common:0.4.1"
+    compileOnly "io.github.llamalad7:mixinextras-forge:0.4.1"
 }
 
 processResources {
@@ -39,5 +43,5 @@ processResources {
 }
 
 shadowJar {
-    relocate 'de.maxhenkel.corelib', 'de.maxhenkel.pipez.corelib'
+    relocate 'de.maxhenkel.corelib', 'com.nekogan.pipez.corelib'
 }
